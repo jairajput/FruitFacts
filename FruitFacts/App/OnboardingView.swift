@@ -9,11 +9,13 @@ import SwiftUI
 
 struct OnboardingView: View {
     var body: some View {
+        var fruits: [Fruit] = fruitData
         
         TabView{
-            ForEach(0..<5) { item in
+            ForEach(fruits[0...5]) { item in
                 
-                FruitCardView()
+                FruitCardView(fruit: item)
+            
                 
             }
         }
