@@ -47,7 +47,7 @@ struct FruitCardView: View {
         
         .frame(minWidth: 0, maxWidth: .infinity ,minHeight: 0 , maxHeight: .infinity,alignment: .center)
         .background(LinearGradient(gradient: Gradient(colors: fruit.gradientColors), startPoint: .top, endPoint: .bottom))
-        .cornerRadius(20)
+        .cornerRadius(20) 
         .padding(.horizontal,20)
     }
 }
