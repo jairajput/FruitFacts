@@ -7,15 +7,21 @@
 
 import SwiftUI
 
+
 struct ContentView: View {
+    var fruits:[Fruit] = fruitData
     var body: some View {
-        VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+        NavigationView{
+            List{
+                ForEach(fruits.shuffled()) { item in
+                    FruitRowView(fruit: item)
+                        .padding(.vertical, 4)
+                    
+                }
+            }
+            .navigationTitle("Fruits")
         }
-        .padding()
+        
     }
 }
 
